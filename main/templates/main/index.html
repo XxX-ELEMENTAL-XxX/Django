@@ -1,0 +1,93 @@
+{% extends 'main/layout.html'%}
+{% load static %}
+{% block title %} MySushi {% endblock %}
+
+{% block content %}
+<div class="name-catalog-sets">
+   <p class="set">Сети</p>
+</div>
+
+<div class="grid-container-img">
+   <div class="grid-item">
+      <a href="{% url 'setGurman'%}">
+      <img src="{% static 'main/img/setSushi_1.jpg' %}" alt="Описание изображения 1">
+      <p class="grams">{{set.0.grams}} г</p>
+      <p class="name-set">{{set.0.title}}</p>
+      <p class="description">🔥Отримуйте 5% КЕШБЕК🔥 Філадельфія з лососем, Кранч з креветкою, Каліфорнія з лососем в кунжуті, Макі з тунцем.</p>
+      <p class="price">{{set.0.price}} грн</p>
+      <button type= "submit" class="btn-to-cart">В КОШИК</button>
+      </a>
+   </div>
+   <div class="grid-item">
+      <a href="{% url 'setSensei'%}">
+         <img src="{% static 'main/img/setSushi_2.jpg' %}" alt="Описание изображения 1">
+         <p class="grams">{{set.1.grams}} г</p>
+         <p class="name-set">{{set.1.title}}</p>
+         <p class="description">🔥Отримуйте 5% КЕШБЕК🔥 Каліфорнія темпура, Темпура рол з куркою, Запечений з крабовим міксом, Ніжний з куркою. </p>
+         <p class="price">{{set.1.price}}</p>
+         <button class="btn-to-cart">В КОШИК</button>
+      </a>
+   </div>
+   <div class="grid-item">
+      <img src="{% static 'main/img/setSushi_3.jpg' %}" alt="Описание изображения 1">
+      <p class="grams">1010 г</p>
+      <p class="name-set">СЕТ БАНЗАЙ</p>
+      <p class="description">🔥Отримуйте 5% КЕШБЕК🔥 Філадельфія дует, Футомакі з лососем (гострий), Каліфорнія з крабовим міксом в кунжуті. </p>
+      <p class="price">599 грн</p>
+      <button class="btn-to-cart">В КОШИК</button>
+   </div>
+   <div class="grid-item">
+      <img src="{% static 'main/img/setSushi_4.jpg' %}" alt="Описание изображения 1">
+      <p class="grams">2000  г</p>
+      <p class="name-set">СЕТ КІОКО</p>
+      <p class="description">🔥Отримуйте 5% КЕШБЕК🔥 Філадельфія дует, Каліфорнія з лососем в кунжуті, Кранч з креветкою, Макі з тунцем, Ніжний з куркою, Запечений з крабовим міксом. </p>
+      <p class="price">1149 грн</p>
+      <button class="btn-to-cart">В КОШИК</button>
+   </div>
+   <div class="grid-item">
+      <img src="{% static 'main/img/setSushi_5.jpg' %}" alt="Описание изображения 1">
+      <p class="grams">1000 г</p>
+      <p class="name-set">СЕТ ХІТ</p>
+      <p class="description">🔥Отримуйте 5% КЕШБЕК🔥 Роял Рол, Каліфорнія з креветкою в кунжуті, Каліфорнія з крабовим міксом в кунжуті, Каліфорнія Чікен. </p>
+      <p class="price">499 грн</p>
+      <button class="btn-to-cart">В КОШИК</button>
+   </div>
+   <div class="grid-item">
+      <img src="{% static 'main/img/setSushi_6.jpg' %}" alt="Описание изображения 1">
+      <p class="grams">2310 г</p>
+      <p class="name-set">СЕТ СІМЕЙНИЙ</p>
+      <p class="description">🔥Отримуйте 5% КЕШБЕК🔥 Філадельфія з лососем, Філадельфія з креветкою, Каліфорнія з крабовим міксом в кунжуті, Каліфорнія темпура. </p>
+      <p class="price">1599 грн</p>
+      <button class="btn-to-cart">В КОШИК</button>
+   </div>
+</div>
+<div class="name-catalog-salad">
+   <p class="set">Гаряче та салати</p>
+</div>
+<div class="grid-container-img">
+   <div class="grid-item">
+      <img src="{% static 'main/img/rise_1.jpg' %}" alt="Описание изображения 1">
+      <p class="grams">340 г</p>
+      <p class="name-set">ЛОКШИНА УДОН З КРЕВЕТКАМИ</p>
+      <p class="description">🔥Отримуйте 5% КЕШБЕК🔥 Локшина удон, креветки, брокколі, спаржа, цибуля ріпчаста, морква. </p>
+      <p class="price">199 грн</p>
+      <button class="btn-to-cart">В КОШИК</button>
+   </div>
+   <div class="grid-item">
+      <img src="{% static 'main/img/rise_2.jpg' %}" alt="Описание изображения 1">
+      <p class="grams">340 г</p>
+      <p class="name-set">ЛОКШИНА РИСОВА З В ОЧАМИ</p>
+      <p class="description">🔥Отримуйте 5% КЕШБЕК🔥 Локшина фунчоза, броколі, спаржа, цибуля ріпчаста, морква, перець болгарський, часник. </p>
+      <p class="price">129 грн</p>
+      <button class="btn-to-cart">В КОШИК</button>
+   </div>
+   <div class="grid-item">
+      <img src="{% static 'main/img/rise_3.jpg' %}" alt="Описание изображения 1">
+      <p class="grams">300 г</p>
+      <p class="name-set">РИС З ОВОЧАМИ</p>
+      <p class="description">🔥Отримуйте 5% КЕШБЕК🔥 Рис, броколі, спаржа, цибуля ріпчаста, морква, перець болгарський, часник, соус соєвий. </p>
+      <p class="price">119 грн</p>
+      <button class="btn-to-cart">В КОШИК</button>
+   </div>
+</div>
+{% endblock %}

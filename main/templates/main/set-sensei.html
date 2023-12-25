@@ -1,0 +1,26 @@
+{% extends 'main/layout.html'%}
+{% load static %}
+
+{% block title %} Сет Сенсей {% endblock %}
+{% block content %}
+
+<div class="container">
+   <div class="left-side">
+      <img src="{% static 'main/img/setSushi_2.jpg' %}" alt="Описание изображения 2">
+   </div>
+   <div class="right-side">
+      {%if set.1%}
+         <p class="name-set">
+            {{set.1.title}}
+         </p>
+         <p class="grams">{{set.1.grams}} г</p>
+         <p class="price-set">{{set.1.price}} грн</p>
+         <p class="composition">Склад: {{set.1.composition}}</p>
+         <button class="btn-to-cart-sets">В КОШИК</button>
+      {%else%}
+         <p class="price-set">Товару немає в наявності</p>
+      {% endif %}
+   </div>
+</div>
+
+{% endblock %}

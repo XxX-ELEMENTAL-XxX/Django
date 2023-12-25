@@ -1,0 +1,37 @@
+{% extends 'main/layout.html'%}
+{% load static %}
+
+{% block title %} Сет Гурман {% endblock %}
+{% block content %}
+
+<div class="container">
+   <div class="left-side">
+      <img src="{% static 'main/img/setSushi_1.jpg' %}" alt="Описание изображения 1">
+   </div>
+   <div class="right-side">
+      {%if set.0%}
+         <p class="name-set">
+            {{set.0.title}}
+         </p>
+         <p class="grams">{{set.0.grams}} г</p>
+         <p class="price-set">{{set.0.price}} грн</p>
+         <p class="composition">Склад: {{set.0.composition}}</p>
+         <button class="btn-to-cart-sets">В КОШИК</button>
+      {%else%}
+         <p class="price-set">Товару немає в наявності</p>
+      {% endif %}
+   </div>
+</div>
+
+
+{% comment %} {% if products %}
+   {%for el in products%}
+      <div class="alert alert-warning">
+         <h3>{{el.title}}</h3>
+         <p>{{el.number}}</p>
+      </div>
+   {%endfor%}
+   {% else %}
+      <p>Ви нічого не додали(</p>
+      {% endif %} {% endcomment %}
+{% endblock %}

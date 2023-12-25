@@ -1,0 +1,62 @@
+.container {
+   display: flex;
+   justify-content: space-between; /* Разместить элементы по краям контейнера */
+   align-items: center; /* Центрировать вертикально */
+   text-align: left;
+   margin-top: 100px;
+   padding: 30px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.left-side img {
+   max-width: 86%;
+   border-radius: 10px;
+   height: auto;
+   margin: 0;
+}
+
+.right-side {
+   flex: 1; /* Занимать доступное пространство */
+   margin-left: -30px; /* Добавить немного отступа между изображением и текстом */
+}
+
+/* Дополнительные стили для текстовых элементов, если нужно */
+.right-side .name-set{
+   font-size: 30px;
+   font-weight: 600;
+   color: rgb(51, 51, 51);
+}
+.right-side .grams{
+   font-size: 20px;
+   color: rgb(51, 51, 51);
+}
+.right-side .price-set{
+   font-size: 34px;
+   font-weight: 600;
+   color: rgb(51, 51, 51);
+   margin-bottom: 40px;
+}
+.right-side .composition {
+   font-size: 16px;
+   color: rgb(110, 109, 109);
+}
+
+.right-side .btn-to-cart-sets{
+   font-size: 18px;
+   font-weight: 600;
+   padding: 12px 18px;
+   color: rgb(255, 255, 255);
+   border: none;
+   border-radius: 15%;
+   background-color: rgb(255, 28, 28);
+   margin-right: 50px;
+   transition: box-shadow 0.4s ease;
+}
+
+.right-side .btn-to-cart-sets:hover{
+   box-shadow: 0 0 10px rgb(221, 51, 51);
+}
+
+.footer{
+   margin-top: 200px;
+}

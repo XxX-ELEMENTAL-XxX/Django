@@ -1,0 +1,16 @@
+{% extends 'main/layout.html'%}
+
+{% block title %} Кошик {% endblock %}
+
+{% block content %}
+{% if products %}
+   {%for el in products%}
+      <div class="alert alert-warning">
+         <h3>{{el.title}}</h3>
+         <p>{{el.number}}</p>
+      </div>
+   {%endfor%}
+   {% else %}
+      <p>Ви нічого не додали(</p>
+      {% endif %}
+{% endblock %}
